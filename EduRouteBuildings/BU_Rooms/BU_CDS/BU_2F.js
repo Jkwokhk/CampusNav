@@ -18,7 +18,7 @@ function highlightLocation(coordinates) {
     // Remove the highlight after a delay (e.g., 2 seconds)
     setTimeout(() => {
         mapImage.parentNode.removeChild(highlight);
-    }, 5000);
+    }, 2000);
 }
 
 // Listen for click events on the location list
