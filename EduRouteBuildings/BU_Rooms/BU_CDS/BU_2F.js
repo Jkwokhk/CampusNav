@@ -12,6 +12,11 @@ function highlightLocation(coordinates) {
     highlight.style.width = '50px'; // Adjust the size as needed
     highlight.style.height = '50px'; // Adjust the size as needed
 
+    const card = document.getElementById('card');
+    card.style.visibility = 'visible';
+
+
+
     // Append the highlight to the map container
     mapImage.parentNode.appendChild(highlight);
 
