@@ -1,0 +1,29 @@
+/* Add styles for the highlighted location (hollow circle) */
+.highlighted {
+    width: 20px;
+    height: 20px;
+    border: 2px solid red;
+    border-radius: 50%; /* Makes the shape a circle */
+    position: absolute;
+    transform: translate(-50%, -50%); /* Center the circle at the coordinates */
+    pointer-events: none; /* Prevents the circle from blocking mouse interactions with the image */
+}
+
+#map-container {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+#map-image {
+    width: 400px; /* Adjust the width as needed */
+    height: 250px; /* Adjust the height as needed */
+}
+
+#location-list {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+    list-style-type: none;
+}
