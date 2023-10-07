@@ -5,3 +5,5 @@ This URL is for the Figma Prototype: https://www.figma.com/proto/VE6TBdcqxZLDhfZ
 
 
 To access the webpage, git clone this repository and click on EduRoute.html
+
+Our PowerPoint with all the info is in the repository as well under EDUROUTE PITCH.pptx
