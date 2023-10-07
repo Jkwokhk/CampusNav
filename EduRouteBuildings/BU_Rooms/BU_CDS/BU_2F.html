@@ -6,7 +6,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Cycling Card</title>
+    <title>EDURoute</title>
     <style>
         /* CSS for the card */
         .card {
@@ -34,7 +34,7 @@
             width: 30px;
             height: 30px;
             background-color: #DEF2C8;
-            color: white;
+            color: black;
             border: none;
             border-radius: 50%;
             cursor: pointer;
@@ -58,7 +58,7 @@
 
     <div class="card">
         <div class="card-content">
-            <h1>Page 1</h1>
+            <h1>Enter CDS through the east entrance</h1>
         </div>
         <button class="arrow prev-arrow" onclick="prevPage()">&#8249;</button>
         <button class="arrow next-arrow" onclick="nextPage()">&#8250;</button>
@@ -75,7 +75,7 @@
         }
 
         function nextPage() {
-            if (currentPage < 3) { // Change 3 to the total number of pages
+            if (currentPage < 5) { // Change 3 to the total number of pages
                 currentPage++;
                 updatePage();
             }
@@ -83,7 +83,28 @@
 
         function updatePage() {
             const cardContent = document.querySelector(".card-content");
-            cardContent.innerHTML = `<h1>Page ${currentPage}</h1>`;
+            let cardStr = "";
+
+            if (currentPage == 1) {
+                cardStr = "Enter CDS through the east entrance";
+            }
+            else if (currentPage == 2) {
+                cardStr = "Take a left immediately after entering";
+            }
+            else if (currentPage == 3) {
+                cardStr = "Continue straight";
+            }
+            else if (currentPage == 4) {
+                cardStr = "Turn left after the water fountain";
+            }
+            else if (currentPage == 5) {
+                cardStr = "Enter the room and have a nice class!"
+            }
+            else {
+                cardStr = "Error :(";
+            }
+
+            cardContent.innerHTML = `<h1>${cardStr}</h1>`;
         }
     </script>
 </body>
