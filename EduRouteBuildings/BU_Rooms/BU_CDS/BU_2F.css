@@ -11,7 +11,7 @@
 
 #map-container {
     position: fixed;
-    top: 25%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     
@@ -24,7 +24,7 @@
 
 #location-list {
     text-align: center;
-    margin-top: 350px; /* Adjust the margin as needed */
+    margin-top: 280px; /* Adjust the margin as needed */
     list-style-type: none;
 }
 
@@ -34,7 +34,7 @@
     height: 600px;
     border: 1px solid #ccc;
     overflow: auto;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 25%;
     margin-left: auto;
