@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusNav</title>
-    <style>
-        .WelcomeDiv{
-            border: 5px red;
-            background-color: lightblue;
-            text-align: center;
-        }
-    </style>
+    <title>EduRoute</title>
+    <link rel="stylesheet" type="text/css" href="EduRoute.css">
+    
 </head>
 <body>
-    <header>
-        <h1>Welcome to CampusNav</h1>
-    </header>
-    <div class="WelcomeDiv">
+    <div class="container">
+    <div class="box-1">
         <h2>
-            Welcome to CampusNav 
+            EduRoute
         </h2>
-        <p>
-            Find your way through Boston University
-        </p>
+        <h5>
+            Navigate your way through campus!
+        </h5>
     </div>
-    <main>
-        <p>Scan the QR code below to download our app:</p>
-        <img src="qrcode.png" alt="QR Code">
-    </main>
+    </div>
+    <div class="centered-dropdown-container">
+    <div class="dropdown">
+        <button class="dropbtn">Search your building...</button>
+        <div class="dropdown-content">
+          <a href="EduRouteBuildings/BU_CDS.html">Center for Computing & Data Sciences (CDS)</a>
+          <a href="EduRouteBuildings/BU_ENG.html">College of Engineering (ENG)</a>
+          <a href="EduRouteBuildings/BU_CAS.html">College of Arts & Sciences (CAS)</a>
+        </div>
+      </div>
+      </div>
+
+    
     <footer>
-        <p>&copy; 2023 CampusNav</p>
+        <p>&copy; 2023 EduRoute</p>
     </footer>
 </body>
 </html>
