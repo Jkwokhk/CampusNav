@@ -4,9 +4,87 @@
     <link rel="stylesheet" href="BU_2F.css" />
     <script src="BU_2F.js"></script>
     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Cycling Card</title>
+    <style>
+        /* CSS for the card */
+        .card {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* CSS for the content */
+        .card-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* CSS for the navigation arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .prev-arrow {
+            left: 10px;
+        }
+
+        .next-arrow {
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
     <div id="map"></div>
     <script src="script.js"></script>
+
+    <div class="card">
+        <div class="card-content">
+            <h1>Page 1</h1>
+        </div>
+        <button class="arrow prev-arrow" onclick="prevPage()">&#8249;</button>
+        <button class="arrow next-arrow" onclick="nextPage()">&#8250;</button>
+    </div>
+
+    <script>
+        let currentPage = 1;
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePage();
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < 3) { // Change 3 to the total number of pages
+                currentPage++;
+                updatePage();
+            }
+        }
+
+        function updatePage() {
+            const cardContent = document.querySelector(".card-content");
+            cardContent.innerHTML = `<h1>Page ${currentPage}</h1>`;
+        }
+    </script>
 </body>
 </html>
