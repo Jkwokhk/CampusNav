@@ -10,7 +10,7 @@
     <style>
         /* CSS for the card */
         .card {
-            width: 300px;
+            width: 400px;
             height: 200px;
             border: 1px solid #ccc;
             overflow: hidden;
@@ -19,11 +19,15 @@
 
         /* CSS for the content */
         .card-content {
-            width: 100%;
+            width: 75%;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            font-size: 15px;
+            margin-right: 45px;
+            margin-left: 45px;
         }
 
         /* CSS for the navigation arrows */
@@ -58,6 +62,7 @@
 
     <div class="card">
         <div class="card-content">
+            <img src="../../../directions/floor1/demo1.jpg">
             <h1>Enter CDS through the east entrance</h1>
         </div>
         <button class="arrow prev-arrow" onclick="prevPage()">&#8249;</button>
@@ -84,9 +89,11 @@
         function updatePage() {
             const cardContent = document.querySelector(".card-content");
             let cardStr = "";
+            let imgStr = "";
 
             if (currentPage == 1) {
                 cardStr = "Enter CDS through the east entrance";
+                imgStr = "../../../directions/floor1/demo1.jpg";
             }
             else if (currentPage == 2) {
                 cardStr = "Take a left immediately after entering";
@@ -104,7 +111,8 @@
                 cardStr = "Error :(";
             }
 
-            cardContent.innerHTML = `<h1>${cardStr}</h1>`;
+            cardContent.innerHTML = `<img src=${imgStr}>
+                                    <h1>${cardStr}</h1>`;
         }
     </script>
 </body>
