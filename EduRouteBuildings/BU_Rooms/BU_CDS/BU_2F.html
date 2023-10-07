@@ -11,10 +11,12 @@
         /* CSS for the card */
         .card {
             width: 400px;
-            height: 200px;
+            height: 600px;
             border: 1px solid #ccc;
             overflow: hidden;
             position: relative;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* CSS for the content */
@@ -28,6 +30,13 @@
             font-size: 15px;
             margin-right: 45px;
             margin-left: 45px;
+            margin-top: 30px;
+            display: block;
+        }
+
+        img {
+            width: 310px;
+            height: auto; /*to preserve the aspect ratio of the image*/
         }
 
         /* CSS for the navigation arrows */
@@ -62,7 +71,7 @@
 
     <div class="card">
         <div class="card-content">
-            <img src="../../../directions/floor1/demo1.jpg">
+            <img src="../../../directions/floor1/demo1.jpg"> 
             <h1>Enter CDS through the east entrance</h1>
         </div>
         <button class="arrow prev-arrow" onclick="prevPage()">&#8249;</button>
@@ -97,15 +106,19 @@
             }
             else if (currentPage == 2) {
                 cardStr = "Take a left immediately after entering";
+                imgStr = "../../../directions/floor1/demo2.jpg";
             }
             else if (currentPage == 3) {
                 cardStr = "Continue straight";
+                imgStr = "../../../directions/floor1/demo3.jpg";
             }
             else if (currentPage == 4) {
                 cardStr = "Turn left after the water fountain";
+                imgStr = "../../../directions/floor1/demo4.jpg";
             }
             else if (currentPage == 5) {
-                cardStr = "Enter the room and have a nice class!"
+                cardStr = "Enter the room and have a nice class!";
+                imgStr = "../../../directions/floor1/demo5.jpg";
             }
             else {
                 cardStr = "Error :(";
